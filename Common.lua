@@ -116,7 +116,10 @@ function SousChef.AddDetails(row)
 	if GetItemLinkItemType(itemLink) == ITEMTYPE_RECIPE then
 		ZO_Tooltip_AddDivider(ItemTooltip)
 		local resultLink = GetItemLinkRecipeResultItemLink(itemLink)
-		local level = GetLevelOrVeteranRankString(GetItemLinkRequiredLevel(resultLink), GetItemLinkRequiredVeteranRank(resultLink), 20)
+		local level = "<unknown>"
+		if nil ~= GetLevelOrChampionPointsString then
+			level = GetLevelOrChampionPointsString(GetItemLinkRequiredLevel(resultLink), GetItemLinkRequiredChampionPoints(resultLink), 20)
+		end
 		ItemTooltip:AddLine(zo_strformat(str.TOOLTIP_CREATES, level, GetItemLinkName(resultLink)), "ZoFontWinH5", 1, 1, 1, BOTTOM)
 		if SousChef.settings.showAltKnowledge then
 			local knownBy = SousChef.settings.Cookbook[u.CleanString(GetItemLinkName(resultLink))]
