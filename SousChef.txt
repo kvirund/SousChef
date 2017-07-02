@@ -1,7 +1,7 @@
 ## Title: Sous Chef by Wobin, CrazyDutchGuy & KatKat42
 ## Author: Wobin & CrazyDutchGuy & KatKat42
 ## Version: v2.20-282f4a9
-## APIVersion: 100012
+## APIVersion: 100019
 ## SavedVariables: SousChef_Settings
 ## OptionalDependsOn: LibStub LibSort LibAddonMenu-2.0
 
